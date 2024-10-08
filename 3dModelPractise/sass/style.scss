@@ -46,6 +46,11 @@
     .laptopModel {
         height: 100%;
         width: 100%;
+        z-index: 9000;
+
+        @media (width <= 1000px) {
+            z-index: 0;
+        }
     }
 
     &__all-text {
@@ -60,24 +65,18 @@
     }
 
     &__title {
-        font-size: 10vmax;
+        font-size: 25vmax;
         color: white;
         text-shadow: 0px 5px 10px gray;
         user-select: none;
         transition: all .3s;
         font-family: Outfit;
-        transform: translateY(-40%);
-        opacity: 0;
-        visibility: hidden;
-        animation: laptop-anim 2s ease alternate forwards;
+        animation-duration: 1s;
+        animation-delay: 1s;
 
-        @keyframes laptop-anim {
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-        } 
+        @media (width <= 1000px) {
+            font-size: 10vmax;
+        }
         
     }
 
@@ -94,6 +93,7 @@
     grid-area: laptopsHis;
     height: 100dvh;
     padding: 1vmax;
+    overflow: hidden;
 
     &__container {
         position: relative;
@@ -114,6 +114,10 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+
+        @media (width <= 1000px) {
+            width: 70%;
+        }
     }
 
     &__paragraph {
@@ -124,5 +128,10 @@
         line-height: 1.6vmax;
         text-align: center;
         text-wrap: balance;
+
+        @media (width <= 1000px) {
+            font-size: 1.5vmax;
+            line-height: 2vmax;
+        }
     }
 }

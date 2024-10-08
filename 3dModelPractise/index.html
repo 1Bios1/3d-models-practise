@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="./wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
     <title>3D model</title>
   </head>
   <body>
@@ -21,26 +28,29 @@
           </div>
         </model-viewer>
         <div class="model-block__all-text">
-          <div class="model-block__title">Laptops</div>
+          <div class="model-block__title animate__animated animate__fadeInDown">Laptops</div>
         </div>
       </header>
       <main class="laptops-history">
         <div class="laptops-history__container">
           <div class="laptops-history__text">
-            <div class="laptops-history__paragraph paragraph_1">
-              The rapidly advancing field of electronics led to construction of the first general-purpose electronic computer in 1946 at the University of Pennsylvania. It was Electronic Numerical Integrator And Computer or ENIAC, the device contained 18,000 vacuum tubes and had a speed of several hundred multiplications per minute. Its program was wired into the processor and had to be manually altered.
+            <div class="laptops-history__paragraph paragraph_1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s">
+              scientist Alan Kay
+              American computer scientist Alan Kay is credited with first prototyping a laptop. In 1968 Kay designed a portable computer he called the Dynabook, which he envisioned as a child-friendly device weighing no more than two pounds.
             </div>
-            <div class="laptops-history__paragraph paragraph_2">
-              Later transistors appeared. The use of the transistor in computers began in the late 1950s. It marked the advent of smaller, faster elements than it was possible to create with the use of vacuum-tube machines. Because transistors use less power and have a much longer life, computers alone were improved a lot. They were called second-generation computers.
+            <div class="laptops-history__paragraph paragraph_2 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.1s">
+              The first true laptop to make it to market, the Osborne 1, hit shelves in April 1981. Created by Adam Osborne, the computer featured a 12.7-centimetre (5-inch) screen and weighed 11.1 kilograms (24.5 pounds). However, the machine still required an AC outlet for power.
             </div>
-            <div class="laptops-history__paragraph paragraph_3">
-              Components became smaller and the system became less expensive to build.
-              Modern digital computers are all conceptually similar, regardless of size and shape. Nevertheless, they can be divided into several categories on the basis
+            <div class="laptops-history__paragraph paragraph_3 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s">
+              Apple got into the game relatively late, releasing its Mac Portable in 1989. This computer sold poorly, but the company’s second effort, in 1991, the PowerBook, was more than a financial success—it was another laptop-design milestone. Its original features included a trackball for navigation and palm rests. Within a few years, additional models of the PowerBook introduced the touch pad, the 256-colour display, and the built-in Ethernet networking port.
             </div>
           </div>
         </div>
       </main>
     </div>
     <script type="module" src="/main.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
