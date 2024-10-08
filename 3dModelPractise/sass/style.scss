@@ -1,0 +1,128 @@
+@import url('./null.scss');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#ar-button {
+    display: none;
+}
+
+#ar-prompt {
+    display: none;
+}
+
+#app {
+
+    display: grid;
+
+    grid-template-areas: 
+        'modelBlk modelBlk'
+        'laptopsHis laptopsHis';    
+
+    min-height: 100dvh;
+    background: rgb(15, 9, 22);
+
+}
+
+.model-block {
+    position: relative;
+    grid-area: modelBlk;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    background: rgb(15, 9, 22);
+
+    @media (width <= 900px) {
+        flex-flow: column nowrap;
+    }
+
+    .laptopModel {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__all-text {
+        position: absolute;
+        display: flex;
+        gap: 2vmax;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        flex-flow: column wrap;
+
+    }
+
+    &__title {
+        font-size: 10vmax;
+        color: white;
+        text-shadow: 0px 5px 10px gray;
+        user-select: none;
+        transition: all .3s;
+        font-family: Outfit;
+        transform: translateY(-40%);
+        opacity: 0;
+        visibility: hidden;
+        animation: laptop-anim 2s ease alternate forwards;
+
+        @keyframes laptop-anim {
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+        } 
+        
+    }
+
+    &__text {
+        font-size: 2vmax;
+        text-wrap: balance;
+        text-align: center;
+        font-family: Prompt;
+    }
+
+}
+
+.laptops-history {
+    grid-area: laptopsHis;
+    height: 100dvh;
+    padding: 1vmax;
+
+    &__container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__text {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        gap: 2vmax;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__paragraph {
+        color: white;
+        text-shadow: 0px 0px 5px white;
+        font-family: Prompt;
+        font-size: 1.25vmax;
+        line-height: 1.6vmax;
+        text-align: center;
+        text-wrap: balance;
+    }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <title>3D model</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="model-block">
+        <model-viewer class="laptopModel" src="asus_rog_strix_scar_17_2023_g733_gaming_laptop-1K.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="" poster="poster.webp" shadow-intensity="1" camera-orbit="0deg 81.47deg 30.38m" field-of-view="" auto-rotate>
+          <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">
+              View in your space
+          </button>
+          <div id="ar-prompt">
+              <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+          </div>
+        </model-viewer>
+        <div class="model-block__all-text">
+          <div class="model-block__title">Laptops</div>
+        </div>
+      </header>
+      <main class="laptops-history">
+        <div class="laptops-history__container">
+          <div class="laptops-history__text">
+            <div class="laptops-history__paragraph paragraph_1">
+              The rapidly advancing field of electronics led to construction of the first general-purpose electronic computer in 1946 at the University of Pennsylvania. It was Electronic Numerical Integrator And Computer or ENIAC, the device contained 18,000 vacuum tubes and had a speed of several hundred multiplications per minute. Its program was wired into the processor and had to be manually altered.
+            </div>
+            <div class="laptops-history__paragraph paragraph_2">
+              Later transistors appeared. The use of the transistor in computers began in the late 1950s. It marked the advent of smaller, faster elements than it was possible to create with the use of vacuum-tube machines. Because transistors use less power and have a much longer life, computers alone were improved a lot. They were called second-generation computers.
+            </div>
+            <div class="laptops-history__paragraph paragraph_3">
+              Components became smaller and the system became less expensive to build.
+              Modern digital computers are all conceptually similar, regardless of size and shape. Nevertheless, they can be divided into several categories on the basis
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
