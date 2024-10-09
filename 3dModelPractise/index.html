@@ -15,7 +15,24 @@
   </head>
   <body>
     <div id="app">
-      <header class="model-block">
+      <div class="dropdown">
+        <div class="dropdown__container">
+          <div id="dropdown-btn" class="dropdown__btn">
+            <div class="line line_1"></div>
+            <div class="line line_2"></div>
+            <div class="line line_3"></div>
+          </div>
+          <ul id="dropdown-elements" class="dropdown__elements">
+            <li class="dropdown__element" id="to-begin">1. Старт</li>
+            <li class="dropdown__element" id="to-introduction">2. Введение</li>
+            <li class="dropdown__element" id="to-pre">3. Предшественники</li>
+            <li class="dropdown__element" id="to-evo">4. Эволюция</li>
+            <li class="dropdown__element" id="to-break">5. Прорыв</li>
+            <li class="dropdown__element" id="to-end">6. Конец</li>
+          </ul>
+        </div>
+      </div>
+      <header id="begin" class="model-block">
         <model-viewer class="laptopModel" src="asus_rog_strix_scar_17_2023_g733_gaming_laptop-1K.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="" poster="poster.webp" shadow-intensity="1" camera-orbit="0deg 81.47deg 30.38m" field-of-view="" auto-rotate>
           <div class="progress-bar hide" slot="progress-bar">
               <div class="update-bar"></div>
@@ -28,23 +45,308 @@
           </div>
         </model-viewer>
         <div class="model-block__all-text">
-          <div class="model-block__title animate__animated animate__fadeInDown">Laptops</div>
+          <div class="model-block__title animate__animated animate__backInDown">Ноутбуки</div>
         </div>
       </header>
       <main class="laptops-history">
+
         <div class="laptops-history__container">
-          <div class="laptops-history__text">
-            <div class="laptops-history__paragraph paragraph_1 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s">
-              scientist Alan Kay
-              American computer scientist Alan Kay is credited with first prototyping a laptop. In 1968 Kay designed a portable computer he called the Dynabook, which he envisioned as a child-friendly device weighing no more than two pounds.
+
+          <div class="laptops-history__text-sec" id="introduction">
+            
+              <div class="laptops-history__title">
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn">
+                  I
+                </div>
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.1s">
+                  n
+                </div>
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.2s">
+                  t
+                </div>
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.3s">
+                  r
+                </div>
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.4s">
+                  o
+                </div>
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.5s">
+                  d
+                </div>
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.6s">
+                  u
+                </div>
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.7s">
+                  c
+                </div>
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.8s">
+                  t
+                </div>
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.9s">
+                  i
+                </div>
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="1s">
+                  o
+                </div>
+                <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="1.1s">
+                  n
+                </div>
+              </div>
+  
+              <div class="laptops-history__text">
+
+                <div class="laptops-history__paragraph paragraph_1 wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                  Ноутбуки стали неотъемлемой частью нашей повседневной жизни. Они используются для работы, учёбы, игр и общения. 
+                </div>
+  
+                <div class="laptops-history__paragraph wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                  Но вопрос о том, как они были созданы, часто остаётся в тени. В данном семинаре мы рассмотрим историю ноутбуков, их эволюцию и влияние на современное общество.
+                </div>
+
+              </div>
+
+          </div>
+    
+          <div class="laptops-history__text-sec" id="predecessors">
+            
+            <div id="pred-title" class="laptops-history__title">
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn">
+                P
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.1s">
+                r
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.2s">
+                e
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.3s">
+                d
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.4s">
+                e
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.5s">
+                c
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.6s">
+                e
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.7s">
+                s
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.8s">
+                s
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.9s">
+                o
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="1s">
+                r
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="1.1s">
+                s
+              </div>
             </div>
-            <div class="laptops-history__paragraph paragraph_2 wow animate__animated animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0.1s">
-              The first true laptop to make it to market, the Osborne 1, hit shelves in April 1981. Created by Adam Osborne, the computer featured a 12.7-centimetre (5-inch) screen and weighed 11.1 kilograms (24.5 pounds). However, the machine still required an AC outlet for power.
+
+            <div class="laptops-history__text">
+              
+              <div class="laptops-history__paragraph paragraph_1 wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                История первого ноутбука началась в конце 1960-х годов. В это время компьютеры были огромными и громоздкими машинами, которые занимали целые комнаты. И  только в 1968 году идея о портативном компьютере впервые была выдвинута. 
+              </div>
+
+              <div class="laptops-history__paragraph wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                Изначально идею создания портативного компьютера предложил американский инженер и изобретатель Алан Кей, который работал в лаборатории искусственного интеллекта в Стэнфордском исследовательском институте. Кей предложил создать маленький компьютер, который можно было бы брать с собой в поездки и использовать для работы.
+              </div>
+
+              <div class="laptops-history__paragraph wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                В 1985 году в продаже появился ноутбук Toshiba T1100, который IT-историки сейчас дружно называют «первым в мире портативным компьютером массового производства» с 11,6-дюймовым ЖК-экраном. Его версия T1100 PLUS была использована в качестве прототипа первого советского ноутбука «Электроника МС 1504», разработанного в Специальном конструкторско-технологическом бюро минского НПО «Интеграл», в 1989-90 гг., и годом позже поступившем в продажу.
+              </div>
+
             </div>
-            <div class="laptops-history__paragraph paragraph_3 wow animate__animated animate__fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s">
-              Apple got into the game relatively late, releasing its Mac Portable in 1989. This computer sold poorly, but the company’s second effort, in 1991, the PowerBook, was more than a financial success—it was another laptop-design milestone. Its original features included a trackball for navigation and palm rests. Within a few years, additional models of the PowerBook introduced the touch pad, the 256-colour display, and the built-in Ethernet networking port.
+
+          </div>
+
+          <div class="laptops-history__text-sec" id="evolution">
+            
+            <div class="laptops-history__title">
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn">
+                E
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.1s">
+                v
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.2s">
+                o
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.3s">
+                l
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.4s">
+                u
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.5s">
+                t
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.6s">
+                i
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.7s">
+                o
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.8s">
+                n
+              </div>
+            </div>
+
+            <div class="laptops-history__text" id="bigtext">
+              
+              <div class="laptops-history__paragraph wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                В 1991 году появляется ноутбук Apple PowerBook 100 — предок линейки MacBook. PowerBook был классическим ноутбуком (в современном понимании) — раскладывающимся, с клавиатурой у экрана и трекболом на месте привычного нам сенсорного трекпада (трекпад в устройствах Apple появился в 1994 году).
+              </div>
+
+              <div class="laptops-history__img">
+                <img class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.8s" src="./assets/apple-first-notebook.png" alt="aplenotebok">
+                <div class="img-text wow animate__animated animate__fadeInRight" data-wow-delay="0.8s">
+                  Первый ноутбук от <strong>Apple</strong>
+                </div>
+              </div>
+
+              <div class="laptops-history__paragraph wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                На рынке появилось больше компаний, которые выпускали переносные устройства. IBM запустила линейку ThinkPad, которая существует до сих пор. Появился Omnibook от HP — самый легкий и компактный компьютер того времени. Он весил чуть меньше 1,5 килограммов, диагональ экрана — 11,2 дюйма. Очень компактно для того времени.
+              </div>
+              
+              <div class="laptops-history__img">
+                <img class="wow animate__animated animate__fadeInLeft" data-wow-delay="0.8s" src="./assets/hpnotebook.png" alt="aplenotebok">
+                <div class="img-text wow animate__animated animate__fadeInRight" data-wow-delay="0.8s">
+                  Первый ноутбук от <strong>Omnibook Hp</strong>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="laptops-history__text-sec" id="breakthroughs">
+            <div class="laptops-history__title">
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn">
+                B
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.1s">
+                r
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.2s">
+                e
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.3s">
+                a
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.4s">
+                k
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.5s">
+                t
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.6s">
+                h
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.7s">
+                r
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.8s">
+                o
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.9s">
+                u
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="1s">
+                g
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="1.1s">
+                h
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="1.2s">
+                s
+              </div>
+            </div>
+
+            <div id="bigtext" class="laptops-history__text">
+
+              <div class="laptops-history__paragraph wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                Первое десятилетие XXI века запомнится нам всем своими технологическими прорывами. У нас появились смартфоны и планшеты, вошел в обиход высокоскоростной беспроводной <strong>интернет</strong>. Компоненты становились меньше и дешевле, а с ними дешевели и ноутбуки. В 2002 году вышел ноутбук Portege 2000 и стал самым тонким и легким ноутбуком в истории — до появления первого MacBook Air.
+              </div>
+
+              <div class="laptops-history__paragraph wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                В 2000-х ноутбук перестал быть устройством для «избранных» и стал массовым продуктом. Фрилансеры заполонили кофейни с новыми макбуками, появились цифровые кочевники (люди, которые путешествуют с ноутбуком и работают откуда угодно). Ноутбуки стали достаточно мощными для работы и развлечений.
+              </div>
+
+              <div class="laptops-history__paragraph wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                Цены на устройства также упали — на рынке появились ноутбуки за $400, $500 или $800, поэтому позволить себе их смогло намного больше людей. Например, в начале двухтысячных появились нетбуки — маломощные, но очень компактные компьютеры, которые подходили только для браузера и работы с документами. На фотошоп и тем более игры мощностей не хватало, но это окупалось мобильностью. 
+              </div>
+              
+
+              <div class="laptops-history__img">
+                <img data-wow-delay="0.8s" src="./assets/notebookfamili.png" alt="noteboks">
+              </div>
+
+              <div class="laptops-history__paragraph">
+                Их сразу же облюбовали школьники и студенты, но для всех остальных такой производительности было недостаточно. Нетбуки просуществовали несколько лет, их довольно быстро заменили ультрабуки — более мощные и весьма компактные ноутбуки.
+              </div>
+
             </div>
           </div>
+
+          <div class="laptops-history__text-sec" id="ending">
+            <div class="laptops-history__title">
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn">
+                C
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.1s">
+                o
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.2s">
+                n
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.3s">
+                c
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.4s">
+                l
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.5s">
+                u
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.6s">
+                t
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.7s">
+                i
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.8s">
+                o
+              </div>
+              <div class="laptops-history__title-letter wow animate__animated animate__bounceIn" data-wow-delay="0.9s">
+                n
+              </div>
+            </div>
+
+            <div class="laptops-history__text">
+              
+              <div class="laptops-history__paragraph wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                Итак, мой семинар подошёл к концу. Это вся основная история развития и появления ноутбуков.
+              </div>
+
+              <div class="laptops-history__paragraph wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                Основной источник информации: <a href="https://www.mvideo.ru/blog/pomogaem-razobratsya/evolyucziya-noutbuka-istoriya-i-interesnye-fakty">https://www.mvideo.ru/blog/pomogaem-razobratsya/evolyucziya-noutbuka-istoriya-i-interesnye-fakty</a>
+              </div>
+
+              <div class="laptops-history__paragraph wow animate__animated animate__fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                Открытая дискуссия по теме: Как ноутбуки изменили Вашу жизнь?
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
       </main>
     </div>

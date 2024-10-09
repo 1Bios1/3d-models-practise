@@ -1,11 +1,17 @@
 @import url('./null.scss');
-@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+
+html {
+    overflow: hidden;
 }
 
 #ar-button {
@@ -17,22 +23,126 @@
 }
 
 #app {
-
+    position: relative;
     display: grid;
 
     grid-template-areas: 
         'modelBlk modelBlk'
         'laptopsHis laptopsHis';    
 
+    grid-template-rows: 100dvh 2fr;
+
     min-height: 100dvh;
     background: rgb(15, 9, 22);
+
+}
+
+.dropdown {
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-self: flex-end;
+    justify-content: flex-start;
+    align-items: flex-end;
+    z-index: 900000;
+    top: 0;
+    padding: 1vmax;
+
+    &__container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0.25vmax;
+        border-radius: 12px;
+        background-color: white;
+        padding: 0.75vmax;
+        color: black;
+        font-size: 1.3vmax;
+        cursor: pointer;
+
+        @media (width <= 1000px) {
+            padding: 1.5vmax;
+            gap: 0.5vmax;
+        }
+
+        .line {
+            transition: all .3s;
+            width: 30px;
+            height: 3px;
+            background-color: black;
+        }
+    }
+
+    .clicked {
+
+        .line_1 {
+            transform: rotateZ(45deg) translateY(120%) translateX(20%);
+        }
+
+        .line_2 {
+            transform: rotateZ(-45deg);
+        }
+
+        .line_3 {
+            opacity: 0;
+            width: 0;
+        }
+
+    }
+
+    &__elements {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 15px;
+        opacity: 0;
+        visibility: hidden;
+        background-color: white;
+        transition: all .3s;
+        transform: translateY(20%);
+    }
+
+    &__element {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.25vmax;
+        width: 100%;
+        padding: 1vmax;
+        cursor: pointer;
+        transition: all .3s;
+        font-family: Pixelify Sans;
+
+        @media (width <= 1000px) {
+            font-size: 2vmax;
+        }
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+
+        
+    }
+
+    .opened {
+        opacity: 1;
+        visibility: visible;
+    }
 
 }
 
 .model-block {
     position: relative;
     grid-area: modelBlk;
-    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,17 +175,19 @@
     }
 
     &__title {
-        font-size: 25vmax;
+        font-size: 13vmax;
         color: white;
         text-shadow: 0px 5px 10px gray;
         user-select: none;
         transition: all .3s;
-        font-family: Outfit;
-        animation-duration: 1s;
-        animation-delay: 1s;
+        font-family: Rubik Mono One;
 
         @media (width <= 1000px) {
             font-size: 10vmax;
+        }
+
+        @media (width <= 700px) {
+            font-size: 5vmax;
         }
         
     }
@@ -91,47 +203,83 @@
 
 .laptops-history {
     grid-area: laptopsHis;
-    height: 100dvh;
-    padding: 1vmax;
-    overflow: hidden;
 
     &__container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
-    &__text {
-        position: absolute;
-        width: 50%;
-        height: 100%;
         display: flex;
         flex-flow: column wrap;
-        gap: 2vmax;
         justify-content: center;
         align-items: center;
-        text-align: center;
+    }
 
-        @media (width <= 1000px) {
-            width: 70%;
+    &__text-sec {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2vmax;
+        width: 100%;
+        height: 100dvh;
+    }
+
+    &__title {
+        display: flex;
+        flex-flow: row nowrap;
+        font-size: 5vmax;
+        font-family: Nabla;
+    }
+
+
+    &__text {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-flow: column nowrap;
+        gap: 2vmax;
+        overflow: hidden;
+    }
+
+    #bigtext {
+        overflow: auto;
+        padding: 2vmax;
+    }
+
+    &__img {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2vmax;
+        width: 40vmax;
+
+        @media (width <= 800px) {
+            flex-flow: row wrap;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .img-text {
+            width: 100%;
+            color: white;
         }
     }
 
     &__paragraph {
+        font-size: 1.75vmax;
+        width: 70%;
         color: white;
-        text-shadow: 0px 0px 5px white;
-        font-family: Prompt;
-        font-size: 1.25vmax;
-        line-height: 1.6vmax;
         text-align: center;
-        text-wrap: balance;
+        text-shadow: 0px 0px 10px white;
 
-        @media (width <= 1000px) {
-            font-size: 1.5vmax;
-            line-height: 2vmax;
+        font-family: Pixelify Sans;
+
+        @media (width <= 800px) {
+            text-align: left;
+            line-height: 2.5vmax;
+            font-size: 2.25vmax;
+            width: 80%;
         }
     }
+
 }
